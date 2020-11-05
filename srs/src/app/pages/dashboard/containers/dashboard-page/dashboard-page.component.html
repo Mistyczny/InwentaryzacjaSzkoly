@@ -1,0 +1,10 @@
+<app-layout>
+  <mat-toolbar class="page-header" role="heading">
+    <h1>Dashboard</h1>
+    <button mat-flat-button>Latest Reports</button>
+  </mat-toolbar>
+
+  <app-support-requests [supportRequestData]="supportRequestData$ | async"></app-support-requests>
+
+  <app-footer></app-footer>
+</app-layout>
