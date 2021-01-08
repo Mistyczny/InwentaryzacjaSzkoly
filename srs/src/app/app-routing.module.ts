@@ -1,39 +1,26 @@
-import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import { NgModule } from '@angular/core';
-import { DashboardPageComponent } from './pages/dashboard/containers';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import {AuthGuard} from './pages/auth/guards';
+import { Routes, RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
-    path: 'dashboard',
-    pathMatch: 'full',
-    canActivate: [AuthGuard],
-    component: DashboardPageComponent
-  },
-  {
-    path: '404',
-    component: NotFoundComponent
+    path: '',
+    component: DashboardComponent
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
+    component: LoginPageComponent
   },
   {
     path: '**',
-    redirectTo: '404'
+    component: PageNotFoundComponent
   }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, {
-      useHash: true,
-      preloadingStrategy: PreloadAllModules
-    })
-  ],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
-
-export class AppRoutingModule {
-}
+export class AppRoutingModule { }

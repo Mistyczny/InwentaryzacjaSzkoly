@@ -1,36 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
-import { ToastrModule } from 'ngx-toastr';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
+import { AngularResizedEventModule } from 'angular-resize-event';
+
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardModule } from './pages/dashboard/dashboard.module';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { AuthModule } from './pages/auth/auth.module';
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TopMenuComponent } from './shared/top-menu/top-menu.component';
+import { SideMenuComponent } from './shared/side-menu/side-menu.component';
+import { TopMenuService } from './shared/top-menu/top-menu.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    DashboardComponent,
+    TopMenuComponent,
+    SideMenuComponent,
+    PageNotFoundComponent,
+    LoginPageComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
-    SharedModule,
-    AuthModule,
-    DashboardModule,
-    BrowserAnimationsModule,
-    RouterModule,
     AppRoutingModule,
-    ToastrModule.forRoot(),
-    MatCardModule,
-    MatButtonModule,
+    AngularResizedEventModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    TopMenuService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d2105790-97f4-467f-9338-6f4e8de17794" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/changelog.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/app.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/consts/colors.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/consts/dist/colors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/consts/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/consts/dist/routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/consts/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/consts/routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/dist/app-routing.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/dist/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/dist/app.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/dist/app.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/auth-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/auth.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/components/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/components/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/components/login-form/dist/login-form.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/components/login-form/login-form.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/components/login-form/login-form.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/components/login-form/login-form.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/containers/auth-page/auth-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/containers/auth-page/auth-page.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/containers/auth-page/auth-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/containers/auth-page/dist/auth-page.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/containers/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/containers/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/dist/auth-routing.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/dist/auth.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/guards/auth.guard.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/guards/dist/auth.guard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/guards/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/guards/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/models/dist/email.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/models/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/models/dist/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/models/email.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/models/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/models/user.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/services/auth.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/services/dist/auth.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/services/dist/email.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/services/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/services/email.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/auth/services/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/components/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/components/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/components/support-requests/dist/support-requests.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/components/support-requests/support-requests.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/components/support-requests/support-requests.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/components/support-requests/support-requests.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/consts/custom-tooltip.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/consts/dist/custom-tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/consts/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/consts/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/containers/dashboard-page/dashboard-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/containers/dashboard-page/dashboard-page.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/containers/dashboard-page/dashboard-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/containers/dashboard-page/dist/dashboard-page.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/containers/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/containers/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/dashboard.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/dist/dashboard.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/models/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/models/dist/support-request-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/models/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/models/support-request-data.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/services/dashboard.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/services/dist/dashboard.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/services/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/dashboard/services/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/not-found/dist/not-found.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/not-found/not-found.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/not-found/not-found.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/pages/not-found/not-found.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/dist/shared.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/footer/dist/footer.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/footer/footer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/footer/footer.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/footer/footer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/components/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/components/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/components/notifications/dist/notifications.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/components/notifications/notifications.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/components/notifications/notifications.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/components/notifications/notifications.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/components/user/dist/user.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/components/user/user.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/components/user/user.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/components/user/user.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/containers/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/containers/header/dist/header.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/containers/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/containers/header/header.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/containers/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/containers/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/dist/header.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/header.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/pipes/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/pipes/dist/short-name.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/pipes/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/header/pipes/short-name.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/layout/dist/layout.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/layout/layout.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/layout/layout.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/layout/layout.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/shared.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/sidebar/dist/sidebar.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/sidebar/sidebar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/sidebar/sidebar.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/shared/sidebar/sidebar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/styles/colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/styles/dist/colors.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/styles/dist/font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/styles/dist/toasrt.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/styles/dist/variables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/styles/font.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/styles/toasrt.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/app/styles/variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/assets/auth/google.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/assets/auth/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/assets/hot-found/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/assets/shared/srs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/custom-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/dist/hmr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/dist/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/dist/polyfills.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/environments/dist/environment.hmr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/environments/dist/environment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/environments/dist/environment.prod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/environments/environment.hmr.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/hmr.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/src/polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srs/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/../srs/tslint.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/Mistyczny/InwentaryzacjaSzkoly" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mktixfjuX3N8gcS4nXuwaWJTXv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../srs" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2105790-97f4-467f-9338-6f4e8de17794" name="Default Changelist" comment="" />
+      <created>1610049547968</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610049547968</updated>
+      <workItem from="1610049549652" duration="4906000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,31 @@
+.bg-color-primary {
+    background-color: #673AB7;
+}
+
+.bg-color-bright {
+    background-color: #512DA8;
+}
+
+.bg-color-dark {
+    background-color: #4527A0;
+}
+
+.bg-color-accent {
+    background-color: #7C4DFF;
+}
+
+.color-primary {
+    color: #673AB7;
+}
+
+.color-bright {
+    color: #512DA8;
+}
+
+.color-dark {
+    color: #4527A0;
+}
+
+.color-accent {
+    color: #7C4DFF;
+}
