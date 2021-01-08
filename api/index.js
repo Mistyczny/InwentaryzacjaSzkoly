@@ -76,6 +76,6 @@ app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname + '/../srs/dist/srs' ,'index.html'));
     });
 
-app.listen(3001, () => {
-    console.log("Server listen at http://localhost:3001");
+app.listen(3000, () => {
+    console.log("Server listen at http://localhost:3000");
 });
