@@ -4,13 +4,15 @@ var express = require("express");
 var app = express();
 
 var bodyParser = require("body-parser");
-var session = require("express-session");
 var path = require("path");
 
-//Mongo DB models
-var userSchema = require('./model/user.schema');
+var jwt = require("jsonwebtoken");
+var bcrypt = require("bcryptjs");
 
-var dbString = "mongodb://localhost:27017/srs?readPreference=primary&appname=MongoDB%20Compass&ssl=false";
+//Mongo DB models
+const UserModel = require("./model/user.schema").UserModel;
+
+var dbString = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false";
 
 mongoose.connect(dbString, {
 	useNewUrlParser: true,
@@ -19,62 +21,112 @@ mongoose.connect(dbString, {
 	useFindAndModify: false
 });
 
-app.use(session({
-    secret: "Cygan123",
-    saveUninitialized: true,
-    resave: true
-}));
+
+//Na produkcji nie używać lub wskazać allow na konkretny ip i port!!!!
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    next();
+});
+
+//JWT secret key
+var jwt_config = {
+    secret: "aLASKA#123",
+    expireTime: 86400 //24H
+};
 
 app.use(express.static(__dirname + '/../srs/dist'));
 
-app.use(bodyParser.json({ type: 'application/*+json' }));
+app.use(bodyParser.json({ type: 'application/json' }));
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.post("/signin", (req, res) => {
-    if(req.session.logged === true) {
+//Check token
+function verifyToken(req, res, next)  {
+    console.log(req.headers);
+    let token = req.headers.authorization;
+    
+    if (!token) {
+      return res.status(401).send({ message: "No token provided!" });
+    }
+  
+    jwt.verify(token, jwt_config.secret, (err, decoded) => {
+      if (err) {
+        return res.status(401).send({ message: "Unauthorized!" });
+      }
+      res.locals.id = decoded.id; 
+      next();
+    });
+};
+
+//User router
+app.get("/users", verifyToken, (req, res) => {
+    var dbRes;
+    UserModel.find({}, {password: 0}).exec((err, docs) => {
+        if(err) {
+            return res.status(500).json({message: err});
+        }
+
         return res.status(200).json({
-            status: false,
-            message: "You are already logged in!"
-        });
-    }
-
-    var dbRes = userSchema.find({login: req.body.login, password: req.body.password}).lean();
-
-    if(dbRes) {
-        //Set up session vars
-        req.session.logged = true;
-
-        res.status(200).json({
             status: true,
-            message: "You are succesfully logged in!"
+            message: "User data prepared.",
+            data: docs
         });
-    }
-    else {
-        res.status(200).json({
-            status: false,
-            message: "Invalid username or password!"
-        });
-    }
-
+    });
 });
 
-app.post('/logout', (req, res) => {
-    if(req.session.logged !== true) {
-        return res.status(200).json({
-            success: false,
-            message: "You are not logged in!"
-        });
-    }
-    req.session.destroy();
-    return res.status(200).json({
-        success: true,
-        message: "You are logged out!"
+app.get("/setup", (req, res) => {
+    var user = new UserModel({
+        login: "admin",
+        password: "Zaq12wsx",
+        firstName: "System",
+        lastName: "Administrator",
+        creationDate: new Date()
+    });
+
+    user.save();
+    res.end();
+});
+
+app.post("/signin", (req, res) => {
+    UserModel.findOne({login: req.body.login, password: req.body.password}, function(err, docs) {
+        if(err) {
+            res.status(500).json({
+                status: false,
+                message: err
+            });
+            return;
+        }
+        if(docs) {
+            var token = jwt.sign({ id: docs._id }, jwt_config.secret, {
+                expiresIn: jwt_config.expireTime
+            });
+            
+            console.log("JWT token: " + token);
+
+            res.status(200).json({
+                status: true,
+                message: "You are succesfully logged in!",
+                user: {
+                    id: docs._id,
+                    login: docs.login,
+                    firstName: docs.firstName,
+                    lastName: docs.lastName,
+                    accessToken: token
+                }
+            });
+        }
+        else {
+            res.status(403).json({
+                status: false,
+                message: "Invalid username or password!"
+            });
+        }
     });
 });
 
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname + '/../srs/dist/srs' ,'index.html'));
-    });
+    res.sendFile(path.join(__dirname + '../srs/dist/srs' ,'index.html'));
+});
 
 app.listen(3000, () => {
     console.log("Server listen at http://localhost:3000");

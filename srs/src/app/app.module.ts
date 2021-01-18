@@ -12,8 +12,12 @@ import { SideMenuComponent } from './shared/side-menu/side-menu.component';
 import { TopMenuService } from './shared/top-menu/top-menu.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserListComponent } from './user-list/user-list.component';
+import { AuthService } from './login-page/auth.service';
+import { UserListItemComponent } from './user-list/user-list-item/user-list-item.component';
+import { UsersListService } from './user-list/user-list.service';
+import { AuthInterceptor } from './login-page/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -23,17 +27,25 @@ import { UserListComponent } from './user-list/user-list.component';
     SideMenuComponent,
     PageNotFoundComponent,
     LoginPageComponent,
-    UserListComponent
+    UserListComponent,
+    UserListItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularResizedEventModule,
     HttpClientModule,
-    FormsModule
+    FormsModule    
   ],
   providers: [
-    TopMenuService
+    TopMenuService,
+    AuthService,
+    UsersListService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

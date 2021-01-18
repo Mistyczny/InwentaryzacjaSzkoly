@@ -11,16 +11,13 @@ const UserSchema = new mongoose.Schema(
             required: true
         },
         firstName: {
-            type: String,
-            required: true
+            type: String
         },
         lastName: {
-            type: String,
-            required: true
+            type: String
         },
         creationDate: {
-            type: Date,
-            required: false
+            type: Date
         }
     },
     {
@@ -28,5 +25,7 @@ const UserSchema = new mongoose.Schema(
     }
 );
 
+
 const UserModel = mongoose.model('User', UserSchema);
-module.exports = UserModel;
+module.exports.UserSchema = UserSchema;
+module.exports.UserModel = UserModel;
