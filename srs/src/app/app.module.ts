@@ -18,9 +18,11 @@ import { AuthService } from './login-page/auth.service';
 import { UserListItemComponent } from './user-list/user-list-item/user-list-item.component';
 import { UsersListService } from './user-list/user-list.service';
 import { AuthInterceptor } from './login-page/auth.interceptor';
-import {BookListService} from './book-list/book-list.service';
-import {BookListComponent} from './book-list/book-list.component';
-import {BookListItemComponent} from './book-list/book-list-item/book-list-item.component';
+import { BookListService } from './book-list/book-list.service';
+import { BookListComponent } from './book-list/book-list.component';
+import { BookListItemComponent } from './book-list/book-list-item/book-list-item.component';
+import { BookListAddComponent } from './book-list/book-list-add/book-list-add.component';
+import { UserListAddComponent } from './user-list/user-list-add/user-list-add.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +34,10 @@ import {BookListItemComponent} from './book-list/book-list-item/book-list-item.c
     LoginPageComponent,
     UserListComponent,
     UserListItemComponent,
+    UserListAddComponent,
     BookListComponent,
-    BookListItemComponent
+    BookListItemComponent,
+    BookListAddComponent
   ],
   imports: [
     BrowserModule,

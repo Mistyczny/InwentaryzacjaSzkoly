@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Book } from '../book.model';
+import { BookListComponent } from '../book-list.component';
 
 @Component({
   selector: 'app-book-list-item',
@@ -7,8 +8,10 @@ import { Book } from '../book.model';
   styleUrls: ['./book-list-item.component.css']
 })
 export class BookListItemComponent implements OnInit {
-
   @Input() book: Book;
+
+  constructor(private bookListComponent: BookListComponent) {
+  }
 
   ngOnInit(): void {
   }
@@ -19,5 +22,6 @@ export class BookListItemComponent implements OnInit {
 
   onRemoveBook(): void {
     console.log('Remove this book: ' + this.book.title);
+    this.bookListComponent.removeBook(this.book.bookID);
   }
 }

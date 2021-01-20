@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import {User} from '../shared/model/user.model';
 
 @Injectable()
 export class UsersListService {
@@ -10,7 +11,11 @@ export class UsersListService {
         return this.http.get('http://localhost:3000/users');
     }
 
-    deleteUser(login: string): void {
-        console.log('Remove user by service: ' + login);
+    deleteUser(login: string): Observable<void> {
+        return this.http.delete<void>('http://localhost:3000/users/' + login);
+    }
+
+    postUser(user: User): Observable<object> {
+        return this.http.post('http://localhost:3000/users/', user);
     }
 }

@@ -76,6 +76,24 @@ app.get("/users", verifyToken, (req, res) => {
     });
 });
 
+// Add book
+app.post("/users", (req, res) => {
+    var user = new UserModel({
+        login: req.body.login,
+        password: req.body.password,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        creationDate: new Date()
+    });
+    user.save();
+    
+    return res.status(200).json({
+        status: true,
+        message: "user added.",
+        data: docs
+    });
+});
+
 app.get("/setup", (req, res) => {
     var user = new UserModel({
         login: "admin",
@@ -126,6 +144,23 @@ app.post("/signin", (req, res) => {
     });
 });
 
+// Add book
+app.post("/books", (req, res) => {
+    var book = new BookModel({
+        bookID: 0,
+        title: req.body.title,
+        author: req.body.author,
+        description: req.body.description
+    });
+    book.save();
+    
+    return res.status(200).json({
+        status: true,
+        message: "Book added.",
+        data: docs
+    });
+});
+
 // Book router
 app.get("/books", verifyToken, (req, res) => {
     var dbRes;
@@ -143,14 +178,18 @@ app.get("/books", verifyToken, (req, res) => {
     });
 });
 
-app.delete('/books', function (req, res) {
-    var dbRes;
-    var bookID = req.body.data;
-    console.log("bookID to remove: " + bookID);
-    BookModel.deleteOne({bookID: bookID}).exec((err, docs) => {
+app.delete('/books/:id', function (req, res) {
+    const { id } = req.params;
+    BookModel.deleteOne({bookID: id}).exec((err, docs) => {
         if(err) {
             return res.status(500).json({message: err});
-        }
+        } 
+
+        return res.status(200).json({
+            status: true,
+            message: "Book data removed.",
+            data: docs
+        });
     });
 });
 

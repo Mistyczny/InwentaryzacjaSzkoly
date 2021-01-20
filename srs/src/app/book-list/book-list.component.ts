@@ -13,18 +13,27 @@ export class BookListComponent implements OnInit {
     constructor(private booksListService: BookListService) { }
 
     ngOnInit(): void {
-        this.booksListService.getBooks().subscribe((data: any) => {
-            console.log(data);
-            if (data.status === true) {
-                data.data.forEach(element => {
-                    this.books.push(new Book(element.bookID, element.title, element.author, element.description));
-                });
-            }
-        });
+      this.reloadBooks();
     }
 
-    onNewBook(): void {
-      console.log('Add new book');
-      this.booksListService.onClickDelete(1);
+    reloadBooks(): void {
+      this.books = [];
+      this.booksListService.getBooks().subscribe((data: any) => {
+        console.log(data);
+        if (data.status === true) {
+          data.data.forEach(element => {
+            this.books.push(new Book(element.bookID, element.title, element.author, element.description));
+          });
+        }
+      });
+    }
+
+    removeBook(bookId: number): void {
+      this.booksListService.deleteBook(bookId).subscribe((data: any) => {
+        console.log(data);
+        if (data.status === true) {
+          this.reloadBooks();
+        }
+      });
     }
 }

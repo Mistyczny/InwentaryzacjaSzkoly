@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/shared/model/user.model';
+import { UserListComponent } from '../user-list.component';
 
 @Component({
   selector: 'app-user-list-item',
@@ -10,6 +11,9 @@ export class UserListItemComponent implements OnInit {
 
   @Input() user: User;
 
+  constructor(private userListComponent: UserListComponent) {
+  }
+
   ngOnInit(): void {
   }
 
@@ -18,6 +22,6 @@ export class UserListItemComponent implements OnInit {
   }
 
   onRemoveUser(): void {
-      console.log('Remove this user: ' + this.user.login);
+      this.userListComponent.removeUser(this.user.login);
   }
 }

@@ -4,7 +4,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserListComponent } from './user-list/user-list.component';
-import {BookListComponent} from './book-list/book-list.component';
+import { BookListComponent } from './book-list/book-list.component';
+import { BookListAddComponent } from './book-list/book-list-add/book-list-add.component';
+import { UserListAddComponent } from './user-list/user-list-add/user-list-add.component';
 
 const routes: Routes = [
   {
@@ -21,8 +23,16 @@ const routes: Routes = [
         component: UserListComponent
       },
       {
+        path: 'addUser',
+        component: UserListAddComponent,
+      },
+      {
         path: 'books',
-        component: BookListComponent
+        component: BookListComponent,
+      },
+      {
+        path: 'addBook',
+        component: BookListAddComponent,
       },
       {
         path: '**',

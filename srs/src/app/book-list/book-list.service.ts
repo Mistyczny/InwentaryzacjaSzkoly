@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Book } from './book.model';
 
 @Injectable()
 export class BookListService {
@@ -10,16 +11,11 @@ export class BookListService {
         return this.http.get('http://localhost:3000/books');
     }
 
-    deleteBook(id: number): Observable<object> {
-        console.log('Remove book by service: ' + id);
-        const body = JSON.stringify({ bookID: 'id'});
-      // tslint:disable-next-line:max-line-length
-        const headers = new HttpHeaders({ 'Content-Type': 'application/json' }).set('access-control-allow-origin', 'http://localhost:3000/');
-        const options = { headers, body };
-        return this.http.delete('http://localhost:3000/books');
+    deleteBook(id: number): Observable<void> {
+        return this.http.delete<void>('http://localhost:3000/books/' + id);
     }
 
-    onClickDelete(id: number): void {
-        this.deleteBook(1).subscribe(() => console.log('user deleted'));
+    postBook(book: Book): Observable<object> {
+        return this.http.post('http://localhost:3000/books/', book);
     }
 }
