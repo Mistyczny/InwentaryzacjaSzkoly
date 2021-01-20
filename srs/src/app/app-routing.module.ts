@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserListComponent } from './user-list/user-list.component';
+import {BookListComponent} from './book-list/book-list.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
       {
         path: 'users',
         component: UserListComponent
+      },
+      {
+        path: 'books',
+        component: BookListComponent
       },
       {
         path: '**',

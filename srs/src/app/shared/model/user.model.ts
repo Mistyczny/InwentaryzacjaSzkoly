@@ -1,10 +1,10 @@
 export class User {
     login: string;
     password: string;
-    firstName:string;
-    lastName:string;
+    firstName: string;
+    lastName: string;
     creationDate: Date;
-    token?:string;
+    token?: string;
 
     constructor(login: string, firstName: string, lastName: string, creationDate: Date) {
         this.login = login;

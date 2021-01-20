@@ -8,11 +8,16 @@ import { User } from 'src/app/shared/model/user.model';
 })
 export class UserListItemComponent implements OnInit {
 
-  @Input('user') user: User;
-  
-  constructor() { }
+  @Input() user: User;
 
   ngOnInit(): void {
   }
 
+  onEditUser(): void {
+      console.log('Edit this user: ' + this.user.login);
+  }
+
+  onRemoveUser(): void {
+      console.log('Remove this user: ' + this.user.login);
+  }
 }

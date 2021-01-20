@@ -1,0 +1,18 @@
+<div class="col-md-12">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Description</th>
+      <th>Edit</th>
+      <th>Remove</th>
+    </tr>
+    </thead>
+    <app-book-list-item *ngFor="let book of books" [book]="book">
+    </app-book-list-item>
+  </table>
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onNewBook()">New Book</button>
+  </div>
+</div>

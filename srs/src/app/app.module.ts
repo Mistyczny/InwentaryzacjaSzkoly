@@ -18,6 +18,9 @@ import { AuthService } from './login-page/auth.service';
 import { UserListItemComponent } from './user-list/user-list-item/user-list-item.component';
 import { UsersListService } from './user-list/user-list.service';
 import { AuthInterceptor } from './login-page/auth.interceptor';
+import {BookListService} from './book-list/book-list.service';
+import {BookListComponent} from './book-list/book-list.component';
+import {BookListItemComponent} from './book-list/book-list-item/book-list-item.component';
 
 @NgModule({
   declarations: [
@@ -28,19 +31,22 @@ import { AuthInterceptor } from './login-page/auth.interceptor';
     PageNotFoundComponent,
     LoginPageComponent,
     UserListComponent,
-    UserListItemComponent
+    UserListItemComponent,
+    BookListComponent,
+    BookListItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularResizedEventModule,
     HttpClientModule,
-    FormsModule    
+    FormsModule
   ],
   providers: [
     TopMenuService,
     AuthService,
     UsersListService,
+    BookListService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,

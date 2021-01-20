@@ -1,0 +1,15 @@
+<tr>
+  <td>{{ book.title }}</td>
+  <td>{{ book.author }}</td>
+  <td>{{ book.description }}</td>
+  <td>
+    <div class="col-xs-12">
+      <button class="btn btn-success" (click)="onEditBook()">Edit Book</button>
+    </div>
+  </td>
+  <td>
+    <div class="col-xs-12">
+      <button class="btn btn-success" (click)="onRemoveBook()">Remove Book</button>
+    </div>
+  </td>
+</tr>

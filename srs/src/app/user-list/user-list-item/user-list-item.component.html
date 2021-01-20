@@ -3,4 +3,14 @@
     <td>{{ user.firstName }}</td>
     <td>{{ user.lastName }}</td>
     <td>{{ user.creationDate }}</td>
+    <td>
+      <div class="col-xs-12">
+        <button class="btn btn-success" (click)="onEditUser()">Edit User</button>
+      </div>
+    </td>
+    <td>
+      <div class="col-xs-12">
+        <button class="btn btn-success" (click)="onRemoveUser()">Remove User</button>
+      </div>
+    </td>
 </tr>

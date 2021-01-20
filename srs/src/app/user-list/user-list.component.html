@@ -2,21 +2,19 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>#</th>
-        <th>First</th>
-        <th>Last</th>
-        <th>Handle</th>
+        <th>Login</th>
+        <th>First name</th>
+        <th>Second name</th>
+        <th>Creation date</th>
+        <th>Edit</th>
+        <th>Remove</th>
       </tr>
     </thead>
-    <tr>
-      <td>dupa</td>
-      <td>dupa</td>
-      <td>dupa</td>
-      <td>dupa</td>
-    </tr>
-
-    <tbody>
-        <app-user-list-item *ngFor="let user of users" [user]="user"></app-user-list-item>
-    </tbody>
+    <app-user-list-item *ngFor="let user of users"
+                        [user]="user">
+    </app-user-list-item>
   </table>
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onNewUser()">New User</button>
+  </div>
 </div>

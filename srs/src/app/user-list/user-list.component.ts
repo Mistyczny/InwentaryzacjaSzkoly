@@ -15,11 +15,15 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
     this.usersListService.getUsers().subscribe((data: any) => {
       console.log(data);
-      if(data.status === true) {
+      if (data.status === true) {
           data.data.forEach(element => {
               this.users.push(new User(element.login, element.firstName, element.lastName, element.creationDate));
           });
       }
     });
+  }
+
+  onNewUser(): void {
+
   }
 }

@@ -12,14 +12,13 @@ export class SideMenuComponent implements OnInit, AfterViewInit {
   constructor(private topMenuService: TopMenuService) { }
 
   ngOnInit(): void {
-    
+
   }
 
-  ngAfterViewInit() : void {
+  ngAfterViewInit(): void {
     this.sidebarHeaderElementRef.nativeElement.height = this.topMenuService.height;
     this.topMenuService.changeHeightEvent.subscribe(
       (height: number) => {
-        console.log("Height subscribe!");
         this.sidebarHeaderElementRef.nativeElement.height = height;
       }
     );

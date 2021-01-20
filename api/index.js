@@ -2,6 +2,7 @@ var mongoose = require("mongoose");
 
 var express = require("express");
 var app = express();
+var cors = require('cors')
 
 var bodyParser = require("body-parser");
 var path = require("path");
@@ -11,6 +12,7 @@ var bcrypt = require("bcryptjs");
 
 //Mongo DB models
 const UserModel = require("./model/user.schema").UserModel;
+const BookModel = require("./model/book.schema").BookModel;
 
 var dbString = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false";
 
@@ -36,7 +38,7 @@ var jwt_config = {
 };
 
 app.use(express.static(__dirname + '/../srs/dist'));
-
+app.use(cors())
 app.use(bodyParser.json({ type: 'application/json' }));
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -124,6 +126,34 @@ app.post("/signin", (req, res) => {
     });
 });
 
+// Book router
+app.get("/books", verifyToken, (req, res) => {
+    var dbRes;
+    console.log("get books");
+    BookModel.find({}).exec((err, docs) => {
+        if(err) {
+            return res.status(500).json({message: err});
+        }
+
+        return res.status(200).json({
+            status: true,
+            message: "Book data prepared.",
+            data: docs
+        });
+    });
+});
+
+app.delete('/books', function (req, res) {
+    var dbRes;
+    var bookID = req.body.data;
+    console.log("bookID to remove: " + bookID);
+    BookModel.deleteOne({bookID: bookID}).exec((err, docs) => {
+        if(err) {
+            return res.status(500).json({message: err});
+        }
+    });
+});
+
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname + '../srs/dist/srs' ,'index.html'));
 });
@@ -131,3 +161,4 @@ app.get('/*', function (req, res) {
 app.listen(3000, () => {
     console.log("Server listen at http://localhost:3000");
 });
+
