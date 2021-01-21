@@ -11,6 +11,7 @@ var bcrypt = require("bcryptjs");
 
 //Mongo DB models
 const UserModel = require("./model/user.schema").UserModel;
+const BookModel = require("./model/book.schema").BookModel;
 
 var dbString = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false";
 
@@ -59,6 +60,7 @@ function verifyToken(req, res, next)  {
 };
 
 app.use(require('./routes/user.route'));
+app.use(require('./routes/book.route'));
 
 app.get("/setup", (req, res) => {
     var user = new UserModel({

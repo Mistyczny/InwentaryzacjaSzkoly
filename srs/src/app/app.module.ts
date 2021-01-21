@@ -22,6 +22,11 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ChartsModule } from 'ng2-charts';
 import { ChartService } from './shared/chart.service';
 import { MomentModule } from 'angular2-moment';
+import {BookListComponent} from './book-list/book-list.component';
+import {BookListAddComponent} from './book-list/book-list-add/book-list-add.component';
+import {BookListItemComponent} from './book-list/book-list-item/book-list-item.component';
+import {BookListService} from './book-list/book-list.service';
+import { BookListEditComponent } from './book-list/book-list-edit/book-list-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,11 @@ import { MomentModule } from 'angular2-moment';
     LoginPageComponent,
     UserListComponent,
     UserListItemComponent,
-    MainPageComponent
+    MainPageComponent,
+    BookListComponent,
+    BookListItemComponent,
+    BookListAddComponent,
+    BookListEditComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +57,7 @@ import { MomentModule } from 'angular2-moment';
     TopMenuService,
     AuthService,
     UsersListService,
+    BookListService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,

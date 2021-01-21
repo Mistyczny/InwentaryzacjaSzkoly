@@ -1,0 +1,23 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Book Form</h1>
+    <form (ngSubmit)="onSubmitBook()" #BookForm="ngForm">
+      <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" id="Title"
+               [(ngModel)]="model.title" name="Title">
+      </div>
+      <div class="form-group">
+        <label for="Author">Author</label>
+        <input type="text" class="form-control" id="Author"
+               [(ngModel)]="model.author" name="Author">
+      </div>
+      <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" id="Description"
+               [(ngModel)]="model.description" name="Description">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>

@@ -5,6 +5,9 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserListComponent } from './user-list/user-list.component';
+import {BookListComponent} from './book-list/book-list.component';
+import { BookListAddComponent } from './book-list/book-list-add/book-list-add.component';
+import { BookListEditComponent } from './book-list/book-list-edit/book-list-edit.component';
 
 const routes: Routes = [
   {
@@ -23,6 +26,18 @@ const routes: Routes = [
       {
         path: 'users',
         component: UserListComponent
+      },
+      {
+        path: 'books',
+        component: BookListComponent
+      },
+      {
+        path: 'addBook',
+        component: BookListAddComponent
+      },
+      {
+        path: 'editBook/:id',
+        component: BookListEditComponent
       },
       {
         path: '**',
