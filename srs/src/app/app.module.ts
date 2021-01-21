@@ -23,6 +23,7 @@ import { BookListComponent } from './book-list/book-list.component';
 import { BookListItemComponent } from './book-list/book-list-item/book-list-item.component';
 import { BookListAddComponent } from './book-list/book-list-add/book-list-add.component';
 import { UserListAddComponent } from './user-list/user-list-add/user-list-add.component';
+import { InventoryListComponent } from './inventory-list/inventory-list.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { UserListAddComponent } from './user-list/user-list-add/user-list-add.co
     UserListAddComponent,
     BookListComponent,
     BookListItemComponent,
-    BookListAddComponent
+    BookListAddComponent,
+    InventoryListComponent
   ],
   imports: [
     BrowserModule,
