@@ -18,6 +18,10 @@ import { AuthService } from './login-page/auth.service';
 import { UserListItemComponent } from './user-list/user-list-item/user-list-item.component';
 import { UsersListService } from './user-list/user-list.service';
 import { AuthInterceptor } from './login-page/auth.interceptor';
+import { MainPageComponent } from './main-page/main-page.component';
+import { ChartsModule } from 'ng2-charts';
+import { ChartService } from './shared/chart.service';
+import { MomentModule } from 'angular2-moment';
 
 @NgModule({
   declarations: [
@@ -28,14 +32,17 @@ import { AuthInterceptor } from './login-page/auth.interceptor';
     PageNotFoundComponent,
     LoginPageComponent,
     UserListComponent,
-    UserListItemComponent
+    UserListItemComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularResizedEventModule,
     HttpClientModule,
-    FormsModule    
+    FormsModule,
+    ChartsModule,
+    MomentModule
   ],
   providers: [
     TopMenuService,
@@ -45,7 +52,8 @@ import { AuthInterceptor } from './login-page/auth.interceptor';
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
-    }
+    },
+    ChartService
   ],
   bootstrap: [AppComponent]
 })

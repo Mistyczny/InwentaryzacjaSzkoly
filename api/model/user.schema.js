@@ -4,20 +4,31 @@ const UserSchema = new mongoose.Schema(
     {
         login: {
             type: String,
-            required: true
+            required: true,
+            minlength: 8,
+            maxlength: 32
         },
         password: {
             type: String,
-            required: true
+            required: true,
+            minlength: 8,
+            maxlength: 32
         },
         firstName: {
-            type: String
+            type: String,
+            required: true,
+            minlength: 4,
+            maxlength: 32
         },
         lastName: {
-            type: String
+            type: String,
+            required: true,
+            minlength: 4,
+            maxlength: 32
         },
         creationDate: {
-            type: Date
+            type: Date,
+            required: true
         }
     },
     {

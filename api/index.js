@@ -58,21 +58,7 @@ function verifyToken(req, res, next)  {
     });
 };
 
-//User router
-app.get("/users", verifyToken, (req, res) => {
-    var dbRes;
-    UserModel.find({}, {password: 0}).exec((err, docs) => {
-        if(err) {
-            return res.status(500).json({message: err});
-        }
-
-        return res.status(200).json({
-            status: true,
-            message: "User data prepared.",
-            data: docs
-        });
-    });
-});
+app.use(require('./routes/user.route'));
 
 app.get("/setup", (req, res) => {
     var user = new UserModel({
