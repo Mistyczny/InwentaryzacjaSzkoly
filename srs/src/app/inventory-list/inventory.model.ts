@@ -1,4 +1,4 @@
-export class Inwentaz {
+export class InventoryItem {
     itemID: number;
     name: string;
     count: number;
