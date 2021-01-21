@@ -22,10 +22,10 @@ mongoose.connect(dbString, {
 	useFindAndModify: false
 });
 
-
 //Na produkcji nie używać lub wskazać allow na konkretny ip i port!!!!
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     next();
 });
