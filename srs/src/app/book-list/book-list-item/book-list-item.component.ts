@@ -16,12 +16,7 @@ export class BookListItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onEditBook(): void {
-    console.log('Edit this book: ' + this.book.title);
-  }
-
   onRemoveBook(): void {
-    console.log('Remove this book: ' + this.book.title);
     this.bookListComponent.removeBook(this.book.bookID);
   }
 }

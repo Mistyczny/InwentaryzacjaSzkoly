@@ -17,23 +17,23 @@ export class BookListComponent implements OnInit {
   }
 
   reloadBooks(): void {
-    this.books = [];
-    this.booksListService.getBooks().subscribe((data: any) => {
-      console.log(data);
-      if (data.status === true) {
-        data.data.forEach(element => {
-          this.books.push(new Book(element.bookID, element.title, element.author, element.description));
-        });
-      }
-    });
+      this.books = [];
+      this.booksListService.getBooks().subscribe((data: any) => {
+          console.log(data);
+          if (data.status === true) {
+              data.data.forEach(element => {
+                this.books.push(new Book(element.bookID, element.title, element.author, element.description));
+              });
+          }
+      });
   }
 
   removeBook(bookId: number): void {
     this.booksListService.deleteBook(bookId).subscribe((data: any) => {
-      console.log(data);
-      if (data.status === true) {
-        this.reloadBooks();
-      }
+        console.log(data);
+        if (data.status === true) {
+            this.reloadBooks();
+        }
     });
   }
 }

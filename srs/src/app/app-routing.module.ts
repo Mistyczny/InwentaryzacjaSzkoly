@@ -5,9 +5,12 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserListComponent } from './user-list/user-list.component';
-import {BookListComponent} from './book-list/book-list.component';
+import { BookListComponent } from './book-list/book-list.component';
 import { BookListAddComponent } from './book-list/book-list-add/book-list-add.component';
 import { BookListEditComponent } from './book-list/book-list-edit/book-list-edit.component';
+import { InventoryListComponent } from './inventory-list/inventory-list.component';
+import { InventoryListAddComponent } from './inventory-list/inventory-list-add/inventory-list-add.component';
+import { InventoryListEditComponent } from './inventory-list/inventory-list-edit/inventory-list-edit.component';
 
 const routes: Routes = [
   {
@@ -38,6 +41,18 @@ const routes: Routes = [
       {
         path: 'editBook/:id',
         component: BookListEditComponent
+      },
+      {
+        path: 'inventory',
+        component: InventoryListComponent
+      },
+      {
+        path: 'addInventory',
+        component: InventoryListAddComponent
+      },
+      {
+        path: 'editInventoryItem/:id',
+        component: InventoryListEditComponent
       },
       {
         path: '**',

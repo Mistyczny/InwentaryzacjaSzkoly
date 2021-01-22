@@ -1,0 +1,13 @@
+<tr>
+    <td>{{ inventoryItem.name }}</td>
+    <td>{{ inventoryItem.price }}</td>
+    <td>{{ inventoryItem.serialNumber }}</td>
+    <td>{{ inventoryItem.purchaseDate }}</td>
+    <td>{{ inventoryItem.description }}</td>
+    <li [routerLink]="['..', 'editInventoryItem', inventoryItem.id]" routerLinkActive="active">
+        <a class="mat-raised-button">Edit</a>
+    </li>
+    <td>
+        <button class="btn btn-success" (click)="onRemoveInventoryItem()">Remove</button>
+    </td>
+</tr>

@@ -61,6 +61,7 @@ function verifyToken(req, res, next)  {
 
 app.use(require('./routes/user.route'));
 app.use(require('./routes/book.route'));
+app.use(require('./routes/inventory.route'));
 
 app.get("/setup", (req, res) => {
     var user = new UserModel({
@@ -102,8 +103,7 @@ app.post("/signin", (req, res) => {
                     accessToken: token
                 }
             });
-        }
-        else {
+        } else {
             res.status(403).json({
                 status: false,
                 message: "Invalid username or password!"

@@ -1,4 +1,7 @@
 <div class="col-md-12">
+  <li routerLink="/dashboard/addBook" routerLinkActive="active">
+    <a class="mat-raised-button">Add book</a>
+  </li>
   <table class="table table-bordered">
     <thead>
     <tr>
@@ -12,7 +15,4 @@
     <app-book-list-item *ngFor="let book of books" [book]="book">
     </app-book-list-item>
   </table>
-  <li routerLink="/dashboard/addBook" routerLinkActive="active">
-    <a class="mat-raised-button">Dodaj ksiazke</a>
-  </li>
 </div>

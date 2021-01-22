@@ -59,6 +59,7 @@ router.get("/books/:id", verifyToken, (req, res) => {
 // Remove book
 router.delete('/books/:id', function (req, res) {
     const { id } = req.params;
+    console.log(id)
     BookModel.deleteOne({bookID: id}).exec((err, docs) => {
         if(err) {
             return res.status(500).json({message: err});

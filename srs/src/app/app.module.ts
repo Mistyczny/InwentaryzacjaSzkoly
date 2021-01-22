@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { AngularResizedEventModule } from 'angular-resize-event';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -22,11 +20,16 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ChartsModule } from 'ng2-charts';
 import { ChartService } from './shared/chart.service';
 import { MomentModule } from 'angular2-moment';
-import {BookListComponent} from './book-list/book-list.component';
-import {BookListAddComponent} from './book-list/book-list-add/book-list-add.component';
-import {BookListItemComponent} from './book-list/book-list-item/book-list-item.component';
-import {BookListService} from './book-list/book-list.service';
+import { BookListComponent } from './book-list/book-list.component';
+import { BookListAddComponent } from './book-list/book-list-add/book-list-add.component';
+import { BookListItemComponent } from './book-list/book-list-item/book-list-item.component';
+import { BookListService } from './book-list/book-list.service';
 import { BookListEditComponent } from './book-list/book-list-edit/book-list-edit.component';
+import { InventoryListService } from './inventory-list/inventory-list.service';
+import { InventoryListComponent } from './inventory-list/inventory-list.component';
+import { InventoryListAddComponent } from './inventory-list/inventory-list-add/inventory-list-add.component';
+import { InventoryListItemComponent } from './inventory-list/inventory-list-item/inventory-list-item.component';
+import { InventoryListEditComponent } from './inventory-list/inventory-list-edit/inventory-list-edit.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,11 @@ import { BookListEditComponent } from './book-list/book-list-edit/book-list-edit
     BookListComponent,
     BookListItemComponent,
     BookListAddComponent,
-    BookListEditComponent
+    BookListEditComponent,
+    InventoryListComponent,
+    InventoryListItemComponent,
+    InventoryListAddComponent,
+    InventoryListEditComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +65,7 @@ import { BookListEditComponent } from './book-list/book-list-edit/book-list-edit
     AuthService,
     UsersListService,
     BookListService,
+    InventoryListService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,

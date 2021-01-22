@@ -3,9 +3,9 @@
   <td>{{ book.author }}</td>
   <td>{{ book.description }}</td>
   <li [routerLink]="['..', 'editBook', book.bookID]" routerLinkActive="active">
-    <a class="mat-raised-button">Edytuj książke</a>
+    <a class="mat-raised-button">Edit</a>
   </li>
   <td>
-    <button class="btn btn-success" (click)="onRemoveBook()">Remove Book</button>
+    <button class="btn btn-success" (click)="onRemoveBook()">Remove</button>
   </td>
 </tr>

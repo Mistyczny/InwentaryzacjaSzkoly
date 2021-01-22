@@ -20,15 +20,15 @@ export class BookListEditComponent implements OnInit {
               private router: Router) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-        this.id = params['id'];
-        this.bookListService.getBook(this.id).toPromise().then((data: any) => {
-            console.log(data.data.title)
-            if(data.status === true) {
-                this.model = new Book(data.data.bookID, data.data.title, data.data.author, data.data.description);
-            }
-        });
-    });
+      this.route.params.subscribe(params => {
+          this.id = params['id'];
+          this.bookListService.getBook(this.id).toPromise().then((data: any) => {
+              console.log(data.data.title)
+              if(data.status === true) {
+                  this.model = new Book(data.data.bookID, data.data.title, data.data.author, data.data.description);
+              }
+          });
+      });
   }
 
   onSubmitBook(): void {
