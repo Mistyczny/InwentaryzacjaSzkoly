@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { InventoryListComponent } from '../inventory-list.component';
 import { InventoryItem } from '../inventory.model';
 
@@ -8,14 +9,19 @@ import { InventoryItem } from '../inventory.model';
   styleUrls: ['./inventory-list-item.component.css']
 })
 export class InventoryListItemComponent implements OnInit {
-  @Input() inventoryItem: InventoryItem;
+    @Input() inventoryItem: InventoryItem;
   
-  constructor(private inventoryListComponent: InventoryListComponent) {
-  }
+    constructor(private inventoryListComponent: InventoryListComponent,
+                private route: ActivatedRoute,
+                private router: Router) {}
+      
+    ngOnInit(): void {}
 
-  ngOnInit(): void {}
+    onRemoveInventoryItem(): void {
+        this.inventoryListComponent.removeInventoryItem(this.inventoryItem.id);
+    }
 
-  onRemoveInventoryItem(): void {
-      this.inventoryListComponent.removeInventoryItem(this.inventoryItem.id);
-  }
+    goEditInventoryItemPage(): void {
+      this.router.navigate(['dashboard' ,'editInventoryItem', this.inventoryItem.id]);
+    }
 }

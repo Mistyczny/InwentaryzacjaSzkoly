@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { InventoryListService } from './inventory-list.service';
 import { InventoryItem } from './inventory.model';
 
@@ -10,7 +11,9 @@ import { InventoryItem } from './inventory.model';
 export class InventoryListComponent implements OnInit {
     inventory: InventoryItem[] = [];
 
-    constructor(private inventoryListService: InventoryListService) { }
+    constructor(private inventoryListService: InventoryListService,
+        private route: ActivatedRoute,
+        private router: Router) {}
 
     ngOnInit(): void {
         this.reloadInventory();
@@ -34,5 +37,9 @@ export class InventoryListComponent implements OnInit {
                 this.reloadInventory();
            } 
         });
+    }
+
+    goAddInventoryItemPage(): void {
+        this.router.navigate(['dashboard' ,'addInventory']);
     }
 }

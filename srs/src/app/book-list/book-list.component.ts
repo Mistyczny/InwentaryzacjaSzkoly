@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { from } from 'rxjs';
 import { BookListService } from './book-list.service';
-import {Book} from './book.model';
+import { Book } from './book.model';
 
 @Component({
   selector: 'app-book-list',
@@ -9,8 +11,11 @@ import {Book} from './book.model';
 })
 export class BookListComponent implements OnInit {
   books: Book[] = [];
+  dataSource = this.books;
 
-  constructor(private booksListService: BookListService) { }
+  constructor(private booksListService: BookListService,
+              private route: ActivatedRoute,
+              private router: Router) {}
 
   ngOnInit(): void {
     this.reloadBooks();
@@ -35,5 +40,9 @@ export class BookListComponent implements OnInit {
             this.reloadBooks();
         }
     });
+  }
+
+  goAddBookPage(): void {
+      this.router.navigate(['dashboard' ,'addBook']);
   }
 }

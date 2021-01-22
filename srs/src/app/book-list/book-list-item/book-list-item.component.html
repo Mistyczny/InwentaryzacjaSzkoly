@@ -2,10 +2,12 @@
   <td>{{ book.title }}</td>
   <td>{{ book.author }}</td>
   <td>{{ book.description }}</td>
-  <li [routerLink]="['..', 'editBook', book.bookID]" routerLinkActive="active">
-    <a class="mat-raised-button">Edit</a>
-  </li>
   <td>
-    <button class="btn btn-success" (click)="onRemoveBook()">Remove</button>
+    <button class="btn btn-success pull-right" (click)="goEditBookPage()"> 
+      Edit
+    </button>
+  </td>
+  <td>
+    <button class="btn btn-success" (click)="onRemoveBook()">Remove Book</button>
   </td>
 </tr>
