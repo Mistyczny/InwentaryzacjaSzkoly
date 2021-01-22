@@ -1,0 +1,10 @@
+<tr>
+    <td>{{ borrowedBook.borrowerID }}</td>
+    <td>{{ borrowedBook.bookID }}</td>
+    <td>{{ borrowedBook.borrowDate }}</td>
+    <td>{{ borrowedBook.exprectedReturnDate }}</td>
+    <td>
+        <button class="btn btn-success pull-right" (click)="goEditBookBorrowPage()">Edit</button>
+        <button class="btn btn-success" (click)="onRemoveBookBorrow()">Remove</button>
+    </td>
+</tr>

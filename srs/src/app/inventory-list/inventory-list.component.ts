@@ -12,8 +12,8 @@ export class InventoryListComponent implements OnInit {
     inventory: InventoryItem[] = [];
 
     constructor(private inventoryListService: InventoryListService,
-        private route: ActivatedRoute,
-        private router: Router) {}
+                private route: ActivatedRoute,
+                private router: Router) {}
 
     ngOnInit(): void {
         this.reloadInventory();

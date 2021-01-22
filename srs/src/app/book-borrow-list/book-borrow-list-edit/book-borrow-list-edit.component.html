@@ -1,0 +1,29 @@
+<div class="container">
+    <div [hidden]="submitted">
+      <h1>Book Borrow Form</h1>
+      <form (ngSubmit)="onSubmitBookBorrowEdit()" #BookForm="ngForm">
+        <div class="form-group">
+          <label for="BorrowerID">Borrower ID</label>
+          <input type="text" class="form-control" id="BorrowerID"
+                 [(ngModel)]="model.borrowerID" name="BorrowerID">
+        </div>
+        <div class="form-group">
+            <label for="BookID">Book ID</label>
+            <input type="text" class="form-control" id="BookID"
+                    [(ngModel)]="model.bookID" name="BookID">
+        </div>
+        <div class="form-group">
+            <label for="BorrowDate">Start date</label>
+            <input type="text" class="form-control" id="BorrowDate"
+                   [(ngModel)]="model.borrowDate" name="BorrowDate">
+        </div>
+        <div class="form-group">
+            <label for="ExpectedReturnDate">Expected return date</label>
+            <input type="text" class="form-control" id="ExpectedReturnDate"
+                   [(ngModel)]="model.exprectedReturnDate" name="ExpectedReturnDate">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div>
+  

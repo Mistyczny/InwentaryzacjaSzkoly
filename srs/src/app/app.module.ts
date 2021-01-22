@@ -30,6 +30,11 @@ import { InventoryListComponent } from './inventory-list/inventory-list.componen
 import { InventoryListAddComponent } from './inventory-list/inventory-list-add/inventory-list-add.component';
 import { InventoryListItemComponent } from './inventory-list/inventory-list-item/inventory-list-item.component';
 import { InventoryListEditComponent } from './inventory-list/inventory-list-edit/inventory-list-edit.component';
+import { BookBorrowListComponent } from './book-borrow-list/book-borrow-list.component';
+import { BookBorrowListItemComponent } from './book-borrow-list/book-borrow-list-item/book-borrow-list-item.component';
+import { BookBorrowListService } from './book-borrow-list/book-borrow-list.service';
+import { BookBorrowListAddComponent } from './book-borrow-list/book-borrow-list-add/book-borrow-list-add.component';
+import { BookBorrowListEditComponent } from './book-borrow-list/book-borrow-list-edit/book-borrow-list-edit.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +54,11 @@ import { InventoryListEditComponent } from './inventory-list/inventory-list-edit
     InventoryListComponent,
     InventoryListItemComponent,
     InventoryListAddComponent,
-    InventoryListEditComponent
+    InventoryListEditComponent,
+    BookBorrowListComponent,
+    BookBorrowListItemComponent,
+    BookBorrowListAddComponent,
+    BookBorrowListEditComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +75,7 @@ import { InventoryListEditComponent } from './inventory-list/inventory-list-edit
     UsersListService,
     BookListService,
     InventoryListService,
+    BookBorrowListService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,

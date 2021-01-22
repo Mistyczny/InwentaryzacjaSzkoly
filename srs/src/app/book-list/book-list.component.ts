@@ -11,7 +11,6 @@ import { Book } from './book.model';
 })
 export class BookListComponent implements OnInit {
   books: Book[] = [];
-  dataSource = this.books;
 
   constructor(private booksListService: BookListService,
               private route: ActivatedRoute,

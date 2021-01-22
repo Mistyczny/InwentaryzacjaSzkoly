@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Book } from '../book.model';
 import { BookListService } from '../book-list.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import {root} from 'rxjs/internal-compatibility';
+import { root } from 'rxjs/internal-compatibility';
 
 @Component({
   selector: 'app-book-list-add',

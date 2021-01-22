@@ -62,6 +62,7 @@ function verifyToken(req, res, next)  {
 app.use(require('./routes/user.route'));
 app.use(require('./routes/book.route'));
 app.use(require('./routes/inventory.route'));
+app.use(require('./routes/bookBorrow.route'));
 
 app.get("/setup", (req, res) => {
     var user = new UserModel({

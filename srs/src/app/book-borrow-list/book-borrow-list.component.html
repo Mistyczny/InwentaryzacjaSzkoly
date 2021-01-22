@@ -1,0 +1,18 @@
+<div class="col-md-12">
+    <button class="btn btn-success pull-right" (click)="goAddBookBorrowPage()"> 
+      Add new book borrow
+    </button>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Borrower ID</th>
+        <th>Book ID</th>
+        <th>Start date</th>
+        <th>Expected return date</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <app-book-borrow-list-item *ngFor="let borrowedBook of borrowedBooks" [borrowedBook]="borrowedBook">
+      </app-book-borrow-list-item>
+    </table>
+  </div>

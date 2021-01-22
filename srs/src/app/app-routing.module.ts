@@ -11,6 +11,9 @@ import { BookListEditComponent } from './book-list/book-list-edit/book-list-edit
 import { InventoryListComponent } from './inventory-list/inventory-list.component';
 import { InventoryListAddComponent } from './inventory-list/inventory-list-add/inventory-list-add.component';
 import { InventoryListEditComponent } from './inventory-list/inventory-list-edit/inventory-list-edit.component';
+import { BookBorrowListComponent } from './book-borrow-list/book-borrow-list.component';
+import { BookBorrowListAddComponent } from './book-borrow-list/book-borrow-list-add/book-borrow-list-add.component';
+import { BookBorrowListEditComponent } from './book-borrow-list/book-borrow-list-edit/book-borrow-list-edit.component';
 
 const routes: Routes = [
   {
@@ -53,6 +56,18 @@ const routes: Routes = [
       {
         path: 'editInventoryItem/:id',
         component: InventoryListEditComponent
+      },
+      {
+        path: 'bookBorrows',
+        component: BookBorrowListComponent
+      },
+      {
+        path: 'addBookBorrow',
+        component: BookBorrowListAddComponent
+      },
+      {
+        path: 'editBookBorrow/:id',
+        component: BookBorrowListEditComponent
       },
       {
         path: '**',
