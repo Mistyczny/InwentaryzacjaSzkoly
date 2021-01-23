@@ -14,6 +14,9 @@ import { InventoryListEditComponent } from './inventory-list/inventory-list-edit
 import { BookBorrowListComponent } from './book-borrow-list/book-borrow-list.component';
 import { BookBorrowListAddComponent } from './book-borrow-list/book-borrow-list-add/book-borrow-list-add.component';
 import { BookBorrowListEditComponent } from './book-borrow-list/book-borrow-list-edit/book-borrow-list-edit.component';
+import { UserEditComponent } from './user-list/user-edit/user-edit.component';
+import { ChangePasswordComponent } from './user-list/change-password/change-password.component';
+import { NewUserComponent } from './user-list/new-user/new-user.component';
 
 const routes: Routes = [
   {
@@ -32,6 +35,18 @@ const routes: Routes = [
       {
         path: 'users',
         component: UserListComponent
+      },
+      {
+        path: 'users/:id',
+        component: UserEditComponent
+      },
+      {
+        path: 'users/changePassword/:id',
+        component: ChangePasswordComponent
+      },
+      {
+        path: 'user/new',
+        component: NewUserComponent
       },
       {
         path: 'books',
