@@ -35,6 +35,10 @@ import { BookBorrowListItemComponent } from './book-borrow-list/book-borrow-list
 import { BookBorrowListService } from './book-borrow-list/book-borrow-list.service';
 import { BookBorrowListAddComponent } from './book-borrow-list/book-borrow-list-add/book-borrow-list-add.component';
 import { BookBorrowListEditComponent } from './book-borrow-list/book-borrow-list-edit/book-borrow-list-edit.component';
+import { ChangePasswordComponent } from './user-list/change-password/change-password.component';
+import { NewUserComponent } from './user-list/new-user/new-user.component';
+import { UserEditComponent } from './user-list/user-edit/user-edit.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,9 @@ import { BookBorrowListEditComponent } from './book-borrow-list/book-borrow-list
     LoginPageComponent,
     UserListComponent,
     UserListItemComponent,
+    UserEditComponent,
+    NewUserComponent,
+    ChangePasswordComponent,
     MainPageComponent,
     BookListComponent,
     BookListItemComponent,
@@ -67,7 +74,8 @@ import { BookBorrowListEditComponent } from './book-borrow-list/book-borrow-list
     HttpClientModule,
     FormsModule,
     ChartsModule,
-    MomentModule
+    MomentModule,
+    NgbModule
   ],
   providers: [
     TopMenuService,
