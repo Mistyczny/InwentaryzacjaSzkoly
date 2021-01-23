@@ -4,16 +4,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ChangePasswordComponent } from './user-list/change-password/change-password.component';
+import { NewUserComponent } from './user-list/new-user/new-user.component';
+import { UserEditComponent } from './user-list/user-edit/user-edit.component';
 import { UserListComponent } from './user-list/user-list.component';
-import { BookListComponent } from './book-list/book-list.component';
-import { BookListAddComponent } from './book-list/book-list-add/book-list-add.component';
-import { BookListEditComponent } from './book-list/book-list-edit/book-list-edit.component';
-import { InventoryListComponent } from './inventory-list/inventory-list.component';
-import { InventoryListAddComponent } from './inventory-list/inventory-list-add/inventory-list-add.component';
-import { InventoryListEditComponent } from './inventory-list/inventory-list-edit/inventory-list-edit.component';
-import { BookBorrowListComponent } from './book-borrow-list/book-borrow-list.component';
-import { BookBorrowListAddComponent } from './book-borrow-list/book-borrow-list-add/book-borrow-list-add.component';
-import { BookBorrowListEditComponent } from './book-borrow-list/book-borrow-list-edit/book-borrow-list-edit.component';
 
 const routes: Routes = [
   {
@@ -34,40 +28,16 @@ const routes: Routes = [
         component: UserListComponent
       },
       {
-        path: 'books',
-        component: BookListComponent
+        path: 'users/:id',
+        component: UserEditComponent
       },
       {
-        path: 'addBook',
-        component: BookListAddComponent
+        path: 'users/changePassword/:id',
+        component: ChangePasswordComponent
       },
       {
-        path: 'editBook/:id',
-        component: BookListEditComponent
-      },
-      {
-        path: 'inventory',
-        component: InventoryListComponent
-      },
-      {
-        path: 'addInventory',
-        component: InventoryListAddComponent
-      },
-      {
-        path: 'editInventoryItem/:id',
-        component: InventoryListEditComponent
-      },
-      {
-        path: 'bookBorrows',
-        component: BookBorrowListComponent
-      },
-      {
-        path: 'addBookBorrow',
-        component: BookBorrowListAddComponent
-      },
-      {
-        path: 'editBookBorrow/:id',
-        component: BookBorrowListEditComponent
+        path: 'user/new',
+        component: NewUserComponent
       },
       {
         path: '**',

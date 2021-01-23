@@ -1,4 +1,5 @@
 export class User {
+    id: string;
     login: string;
     password: string;
     firstName:string;
@@ -6,7 +7,8 @@ export class User {
     creationDate: Date;
     token?:string;
 
-    constructor(login: string, firstName: string, lastName: string, creationDate: Date) {
+    constructor(id: string, login: string, firstName: string, lastName: string, creationDate: Date) {
+        this.id = id;
         this.login = login;
         this.firstName = firstName;
         this.lastName = lastName;
